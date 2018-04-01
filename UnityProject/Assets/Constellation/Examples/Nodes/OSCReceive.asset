@@ -1,0 +1,221 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031c77f50463c44499d5ecf8ea343754, type: 3}
+  m_Name: OSCReceive
+  m_EditorClassIdentifier: 
+  script:
+    Nodes:
+    - Name: Tutorial
+      Namespace: Tags
+      Guid: cdfff183-661b-4b4d-b7ab-e99a55d7e2e6
+      XPosition: 11
+      YPosition: 5
+      Inputs: []
+      Outputs: []
+      AttributesData: []
+    - Name: Value
+      Namespace: BasicNodes
+      Guid: 9b8828a4-4300-47ee-8d24-1d4b0163538f
+      XPosition: 120
+      YPosition: 85
+      Inputs: []
+      Outputs:
+      - Guid: a6fd0d5f-e27d-462b-9121-6f44b22e6fc8
+        IsWarm: 1
+        Type: 
+        Description: The value
+      AttributesData:
+      - Value:
+          stringValue: UNDEFINED
+          floatValue: 4444
+        Type: 0
+    - Name: Print
+      Namespace: BasicNodes
+      Guid: ec133e70-171f-45bd-ac60-b3b759564ee8
+      XPosition: 463.5
+      YPosition: 122
+      Inputs:
+      - Guid: 4ed286bd-6d6b-49c9-ba2d-b5802c8a65a8
+        IsWarm: 0
+        Type: 
+        Description: value to log in console
+      Outputs: []
+      AttributesData: []
+    - Name: OSCManager
+      Namespace: OSC
+      Guid: 29d8b5d3-4b17-43a1-a5d2-aafdd1bec86f
+      XPosition: 298.5
+      YPosition: 123
+      Inputs:
+      - Guid: 6e5bbf24-f8f4-40d7-832c-00f43442f32d
+        IsWarm: 0
+        Type: 
+        Description: input port
+      - Guid: 8305d6fd-a4f0-4420-b57c-0b2d74a3e765
+        IsWarm: 0
+        Type: 
+        Description: output port
+      - Guid: 29ba4752-88c4-4634-82be-dd378025ac6e
+        IsWarm: 0
+        Type: 
+        Description: output IP
+      Outputs:
+      - Guid: 34c8d30e-cd96-433d-8889-902deeb7023c
+        IsWarm: 1
+        Type: 
+        Description: On OSC Ready
+      AttributesData: []
+    - Name: Value
+      Namespace: BasicNodes
+      Guid: 9a0495fc-8f09-4892-bac4-2e595f6c1d37
+      XPosition: 119
+      YPosition: 146
+      Inputs: []
+      Outputs:
+      - Guid: af444850-a09b-4e88-b41b-3702cc62b493
+        IsWarm: 1
+        Type: 
+        Description: The value
+      AttributesData:
+      - Value:
+          stringValue: UNDEFINED
+          floatValue: 4445
+        Type: 0
+    - Name: OSCReceive
+      Namespace: OSC
+      Guid: b2290c37-ab20-4a13-a5bc-ae4d71416ac3
+      XPosition: 462.5
+      YPosition: 177
+      Inputs:
+      - Guid: 428a07f5-8ad6-43ad-bf2d-fc312b416f13
+        IsWarm: 0
+        Type: 
+        Description: On OSC Ready
+      Outputs:
+      - Guid: 7b03f882-5751-400d-9121-91f5d94147fa
+        IsWarm: 1
+        Type: 
+        Description: Current OSC Output
+      AttributesData:
+      - Value:
+          stringValue: /CubeX
+          floatValue: 0.000001
+        Type: 1
+    - Name: Print
+      Namespace: BasicNodes
+      Guid: 7a6878f4-476c-4e69-898d-cfd7601ec9f2
+      XPosition: 630
+      YPosition: 178
+      Inputs:
+      - Guid: 3ce94527-704c-4372-b93a-5bb9defca956
+        IsWarm: 0
+        Type: 
+        Description: value to log in console
+      Outputs: []
+      AttributesData: []
+    - Name: Word
+      Namespace: BasicNodes
+      Guid: 0075f98d-8f24-4785-8b3f-8e208fe20a7e
+      XPosition: 100.5
+      YPosition: 215
+      Inputs: []
+      Outputs:
+      - Guid: 485604a6-ec26-4e55-8955-5fc97b0e514a
+        IsWarm: 1
+        Type: 
+        Description: The Word
+      AttributesData:
+      - Value:
+          stringValue: 127.0.0.1
+          floatValue: 0.000001
+        Type: 1
+    - Name: Note
+      Namespace: BasicNodes
+      Guid: 5a4d18bd-4414-46fe-b275-f57ee89abfcf
+      XPosition: 425
+      YPosition: 233
+      Inputs: []
+      Outputs: []
+      AttributesData:
+      - Value:
+          stringValue: You have to open the Pure data example project to make this
+            work :)
+          floatValue: 0.000001
+        Type: 2
+    Links:
+    - Input:
+        Guid: 4ed286bd-6d6b-49c9-ba2d-b5802c8a65a8
+        IsWarm: 0
+        Type: 
+        Description: value to log in console
+      Output:
+        Guid: 34c8d30e-cd96-433d-8889-902deeb7023c
+        IsWarm: 1
+        Type: 
+        Description: On OSC Ready
+      outputPositionY: 152
+    - Input:
+        Guid: 6e5bbf24-f8f4-40d7-832c-00f43442f32d
+        IsWarm: 0
+        Type: 
+        Description: input port
+      Output:
+        Guid: a6fd0d5f-e27d-462b-9121-6f44b22e6fc8
+        IsWarm: 1
+        Type: 
+        Description: The value
+      outputPositionY: 153
+    - Input:
+        Guid: 8305d6fd-a4f0-4420-b57c-0b2d74a3e765
+        IsWarm: 0
+        Type: 
+        Description: output port
+      Output:
+        Guid: af444850-a09b-4e88-b41b-3702cc62b493
+        IsWarm: 1
+        Type: 
+        Description: The value
+      outputPositionY: 173
+    - Input:
+        Guid: 29ba4752-88c4-4634-82be-dd378025ac6e
+        IsWarm: 0
+        Type: 
+        Description: output IP
+      Output:
+        Guid: 485604a6-ec26-4e55-8955-5fc97b0e514a
+        IsWarm: 1
+        Type: 
+        Description: The Word
+      outputPositionY: 193
+    - Input:
+        Guid: 428a07f5-8ad6-43ad-bf2d-fc312b416f13
+        IsWarm: 0
+        Type: 
+        Description: On OSC Ready
+      Output:
+        Guid: 34c8d30e-cd96-433d-8889-902deeb7023c
+        IsWarm: 1
+        Type: 
+        Description: On OSC Ready
+      outputPositionY: 207
+    - Input:
+        Guid: 3ce94527-704c-4372-b93a-5bb9defca956
+        IsWarm: 0
+        Type: 
+        Description: value to log in console
+      Output:
+        Guid: 7b03f882-5751-400d-9121-91f5d94147fa
+        IsWarm: 1
+        Type: 
+        Description: Current OSC Output
+      outputPositionY: 208
+  IsInstance: 0
+  IsDifferentThanSource: 0

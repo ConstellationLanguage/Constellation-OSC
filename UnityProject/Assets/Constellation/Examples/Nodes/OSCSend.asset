@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031c77f50463c44499d5ecf8ea343754, type: 3}
+  m_Name: OSCSend
+  m_EditorClassIdentifier: 
+  script:
+    Nodes:
+    - Name: Tutorial
+      Namespace: Tags
+      Guid: c8966463-5ef7-4874-87b1-1cc449baa04e
+      XPosition: 3
+      YPosition: 3
+      Inputs: []
+      Outputs: []
+      AttributesData: []
+    - Name: Value
+      Namespace: BasicNodes
+      Guid: 7223d451-ca02-4e14-8a1d-20e5f5644bbf
+      XPosition: 120
+      YPosition: 85
+      Inputs: []
+      Outputs:
+      - Guid: 9e5cd61d-ef5b-49df-8fb8-042272b2619e
+        IsWarm: 1
+        Type: 
+        Description: The value
+      AttributesData:
+      - Value:
+          stringValue: UNDEFINED
+          floatValue: 4444
+        Type: 0
+    - Name: OSCManager
+      Namespace: OSC
+      Guid: b2d1d58b-dd77-40ef-9893-0c2eb0338a8e
+      XPosition: 298.5
+      YPosition: 123
+      Inputs:
+      - Guid: cb265017-1e18-406b-98eb-a50ed3386554
+        IsWarm: 0
+        Type: 
+        Description: input port
+      - Guid: 4e4de01e-91ca-4125-a372-0feb13b49386
+        IsWarm: 0
+        Type: 
+        Description: output port
+      - Guid: 005b60b8-a31e-4c1e-9607-694af0da7537
+        IsWarm: 0
+        Type: 
+        Description: output IP
+      Outputs:
+      - Guid: ed28b97f-e2a5-4423-a13d-43c0863852af
+        IsWarm: 1
+        Type: 
+        Description: On OSC Ready
+      AttributesData: []
+    - Name: Note
+      Namespace: BasicNodes
+      Guid: 7eed15f1-1c9f-47e6-98ff-4aa8387e95a2
+      XPosition: 458
+      YPosition: 125
+      Inputs: []
+      Outputs: []
+      AttributesData:
+      - Value:
+          stringValue: You have to open the Pure data example project to make this
+            work :)
+          floatValue: 0.000001
+        Type: 2
+    - Name: Value
+      Namespace: BasicNodes
+      Guid: 0ad6ebc5-03bf-4dc2-9cb5-9a739d398438
+      XPosition: 119
+      YPosition: 146
+      Inputs: []
+      Outputs:
+      - Guid: 0eacbb0e-ba61-4e06-9128-28695cf1b226
+        IsWarm: 1
+        Type: 
+        Description: The value
+      AttributesData:
+      - Value:
+          stringValue: UNDEFINED
+          floatValue: 4445
+        Type: 0
+    - Name: Word
+      Namespace: BasicNodes
+      Guid: 02a80ce8-c0ed-474c-9ab4-401e77f05a1e
+      XPosition: 100.5
+      YPosition: 215
+      Inputs: []
+      Outputs:
+      - Guid: 473d42db-57e7-44f1-b418-134951c2f2f6
+        IsWarm: 1
+        Type: 
+        Description: The Word
+      AttributesData:
+      - Value:
+          stringValue: 127.0.0.1
+          floatValue: 0.000001
+        Type: 1
+    - Name: Value
+      Namespace: BasicNodes
+      Guid: 2568a93e-7190-4e10-aa24-511cbb8f8cc6
+      XPosition: 88.5
+      YPosition: 300
+      Inputs: []
+      Outputs:
+      - Guid: 77a03a20-2976-4668-bc70-b39eb691daef
+        IsWarm: 1
+        Type: 
+        Description: The value
+      AttributesData:
+      - Value:
+          stringValue: UNDEFINED
+          floatValue: 0
+        Type: 0
+    - Name: OSCSend
+      Namespace: OSC
+      Guid: 3ea7af24-6af9-418e-b5a9-4f1aa906fd88
+      XPosition: 258.5
+      YPosition: 302
+      Inputs:
+      - Guid: d2bc801c-f5a9-459c-953b-6b0ef297c771
+        IsWarm: 0
+        Type: 
+        Description: Send OSC
+      Outputs: []
+      AttributesData:
+      - Value:
+          stringValue: /Test
+          floatValue: 0.000001
+        Type: 1
+    Links:
+    - Input:
+        Guid: cb265017-1e18-406b-98eb-a50ed3386554
+        IsWarm: 0
+        Type: 
+        Description: input port
+      Output:
+        Guid: 9e5cd61d-ef5b-49df-8fb8-042272b2619e
+        IsWarm: 1
+        Type: 
+        Description: The value
+      outputPositionY: 153
+    - Input:
+        Guid: 4e4de01e-91ca-4125-a372-0feb13b49386
+        IsWarm: 0
+        Type: 
+        Description: output port
+      Output:
+        Guid: 0eacbb0e-ba61-4e06-9128-28695cf1b226
+        IsWarm: 1
+        Type: 
+        Description: The value
+      outputPositionY: 173
+    - Input:
+        Guid: 005b60b8-a31e-4c1e-9607-694af0da7537
+        IsWarm: 0
+        Type: 
+        Description: output IP
+      Output:
+        Guid: 473d42db-57e7-44f1-b418-134951c2f2f6
+        IsWarm: 1
+        Type: 
+        Description: The Word
+      outputPositionY: 193
+    - Input:
+        Guid: d2bc801c-f5a9-459c-953b-6b0ef297c771
+        IsWarm: 0
+        Type: 
+        Description: Send OSC
+      Output:
+        Guid: 77a03a20-2976-4668-bc70-b39eb691daef
+        IsWarm: 1
+        Type: 
+        Description: The value
+      outputPositionY: 332
+  IsInstance: 0
+  IsDifferentThanSource: 0
